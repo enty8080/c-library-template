@@ -3,7 +3,7 @@ CFLAGS    = -Iinclude -std=c89 -Wall -Wextra -pedantic-errors
 
 Q         = @
 
-SRCS      := src/hello.c
+SRCS      := $(shell find -name "*.c" -print -type f)
 OBJS       = $(patsubst %.c, %.o, $(SRCS))
 
 .PHONY: all test clean
@@ -21,7 +21,7 @@ test: test/main.c
 	$(Q) echo done
 
 clean:
-	$(Q) rm -f $(OBJS) main hello.a
+	$(Q) rm -f $(OBJS) main libhello.a
 
 %.o: %.c
 	$(Q) echo [Compile] $<
