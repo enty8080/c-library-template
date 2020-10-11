@@ -8,11 +8,16 @@ OBJS       = $(patsubst %.c, %.o, $(SRCS))
 
 .PHONY: all clean
 
-all: hello.a
+all: libhello.a
 
-hello.a: $(OBJS)
+libhello.a: $(OBJS)
 	$(Q) echo [Linking] $@
 	$(Q) $(AR) rcs $@ $(OBJS)
+	$(Q) echo done
+
+test: test/main.c
+	$(Q) echo [Compile] $<
+	$(Q) $(CC) $< -o main $(CFLAGS) -lhello -L. -Iinclude
 	$(Q) echo done
 
 clean:
