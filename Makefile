@@ -21,7 +21,7 @@ test: test/main.c
 	$(Q) echo done
 
 clean:
-	$(Q) rm -f $(OBJS) hello.a
+	$(Q) rm -f $(OBJS) main hello.a
 
 %.o: %.c
 	$(Q) echo [Compile] $<
