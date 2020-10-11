@@ -1,5 +1,5 @@
-#ifndef _HIGHLIGHT_H_
-#define _HIGHLIGHT_H_ 1
+#ifndef _HELLO_H_
+#define _HELLO_H_ 1
 
 #ifdef __cplusplus
 extern "C" {
