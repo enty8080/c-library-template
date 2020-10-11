@@ -6,7 +6,7 @@ Q         = @
 SRCS      := src/hello.c
 OBJS       = $(patsubst %.c, %.o, $(SRCS))
 
-.PHONY: all clean
+.PHONY: all test clean
 
 all: libhello.a
 
