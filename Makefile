@@ -11,13 +11,13 @@ OBJS       = $(patsubst %.c, %.o, $(SRCS))
 all: hello.a
 
 hello.a: $(OBJS)
-        $(Q) echo [Linking] $@
-        $(Q) $(AR) rcs $@ $(OBJS)
-        $(Q) echo done
+	$(Q) echo [Linking] $@
+	$(Q) $(AR) rcs $@ $(OBJS)
+	$(Q) echo done
 
 clean:
-        $(Q) rm -f $(OBJS) hello.a
+	$(Q) rm -f $(OBJS) hello.a
 
 %.o: %.c
-        $(Q) echo [Compile] $<
-        $(Q) $(CC) -c $< -o $@ $(CFLAGS)
+	$(Q) echo [Compile] $<
+	$(Q) $(CC) -c $< -o $@ $(CFLAGS)
