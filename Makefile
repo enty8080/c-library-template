@@ -1,5 +1,5 @@
 CC        = gcc
-CFLAGS    = -std=c89 -Wall -Wextra -pedantic-errors
+CFLAGS    = -Iinclude -std=c89 -Wall -Wextra -pedantic-errors
 
 Q         = @
 
