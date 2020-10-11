@@ -1,3 +1,3 @@
-# c-library-template
+# C library template
 
-Thanks @game-lover for help.
+C library template for newbie programmers who want to write their own library.
